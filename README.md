@@ -60,7 +60,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
 8. Create a new event:
 
     ```bash
-        php artisan make:event NameEvent
+     php artisan make:event NameEvent
     ```
     ### Replace `Notif` with the name of the event you created (`Notif` in this case). This is how you broadcast the event in your controller to send real-time notifications.
     Update `Notif.php` to implement `ShouldBroadcastNow`:
