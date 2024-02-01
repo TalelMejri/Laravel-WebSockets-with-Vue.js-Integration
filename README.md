@@ -60,16 +60,16 @@ Follow these steps to set up the environment and start using WebSockets in your 
 8. Create a new event:
 
     ```bash
-    php artisan make:event NotifEvent
+        php artisan make:event NameEvent
     ```
-
-    Update `NotifEvent.php` to implement `ShouldBroadcastNow`:
+    ### Replace `Notif` with the name of the event you created (`Notif` in this case). This is how you broadcast the event in your controller to send real-time notifications.
+    Update `Notif.php` to implement `ShouldBroadcastNow`:
 
     ```php
     use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
     use Illuminate\Queue\SerializesModels;
 
-    class NotifEvent implements ShouldBroadcastNow
+    class Notif implements ShouldBroadcastNow
     {
         use SerializesModels;
 
@@ -91,3 +91,19 @@ Follow these steps to set up the environment and start using WebSockets in your 
         }
     }
     ```
+
+ 9. Broadcast the event in your controller:
+
+    In your controller where you want to broadcast the event:
+
+    ```php
+    use App\Events\NotifEvent;
+
+    // Your code logic here
+
+    broadcast(new NotifEvent("test"));
+    ```
+
+
+
+Feel free to customize and expand on each step based on your project's specific requirements.
