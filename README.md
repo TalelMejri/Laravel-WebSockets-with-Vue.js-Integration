@@ -114,7 +114,6 @@ Follow these steps to set up the environment and start using WebSockets in your 
   ```bash
    http://localhost:8000/laravel-websockets 
   ```
-   -ScreenShot 
    
    <img src="Screenshots/after_connect.png" alt="After Connect" >
    <img src="Screenshots/before_connect.png" alt="Before Connect"  >
