@@ -114,10 +114,10 @@ Follow these steps to set up the environment and start using WebSockets in your 
   ```bash
    http://localhost:8000/laravel-websockets 
   ```
-
-  ![Profile](after_connect.png)    ![Profile](before_connect.png)
-
-      
+   <div class="d-flex">
+         ![Profile](after_connect.png)    ![Profile](before_connect.png)
+   </div>
+ 
 13.To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
 
  Create a test route in your routes/web.php file
