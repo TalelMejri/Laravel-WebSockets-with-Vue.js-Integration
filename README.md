@@ -24,3 +24,9 @@ Follow these steps to set up the environment and start using WebSockets in your 
     ```
     
 4. Uncomment `App\Providers\BroadcastServiceProvider::class` in `config/app.php`.
+
+5. Install Pusher PHP server:
+
+    ```bash
+    composer require pusher/pusher-php-server ^VERSION --ignore-platform-reqs
+    ```
