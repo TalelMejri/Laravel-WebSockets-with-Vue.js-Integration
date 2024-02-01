@@ -40,3 +40,20 @@ Follow these steps to set up the environment and start using WebSockets in your 
     PUSHER_APP_SECRET=local
     PUSHER_APP_CLUSTER=mt1
     ```
+7. Configure broadcasting in `config/broadcasting.php`:
+
+    ```php
+    'pusher' => [
+        'driver' => 'pusher',
+        'key' => env('PUSHER_APP_KEY'),
+        'secret' => env('PUSHER_APP_SECRET'),
+        'app_id' => env('PUSHER_APP_ID'),
+        'options' => [
+            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'encrypted' => true,
+            'host' => '127.0.0.1',
+            'port' => 6001,
+            'scheme' => 'http',
+        ],
+    ],
+    ```
