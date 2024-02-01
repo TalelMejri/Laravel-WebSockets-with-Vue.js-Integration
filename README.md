@@ -57,3 +57,8 @@ Follow these steps to set up the environment and start using WebSockets in your 
         ],
     ],
     ```
+8. Create a new event
+
+```bash
+php artisan make:event NameEvent
+  ```
