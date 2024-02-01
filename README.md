@@ -101,8 +101,22 @@ Follow these steps to set up the environment and start using WebSockets in your 
 
     // Your code logic here
 
-    broadcast(new NotifEvent("test"));
+    broadcast(new Notif("test"));
     ```
+
+10.To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
+
+ Create a test route in your routes/web.php file:
+
+    ```php
+    use App\Events\Notif;
+    
+    Route::get('/broadcast', function () {
+        broadcast(new Notif());
+        return "Event has been sent!";
+    });
+    ```
+
 
 
 
