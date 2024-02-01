@@ -97,7 +97,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
     In your controller where you want to broadcast the event:
 
     ```php
-    use App\Events\NotifEvent;
+    use App\Events\Notif;
 
     // Your code logic here
 
@@ -127,7 +127,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
     use App\Events\Notif;
     
     Route::get('/broadcast', function () {
-        broadcast(new Notif());
+        broadcast(new Notif("test"));
         return "Event has been sent!";
     });
   ```
@@ -148,8 +148,8 @@ Follow these steps to set up the environment and start using WebSockets in your 
 
 window.Echo = new Echo({
     broadcaster: 'pusher',
-    key: "local"
-    wsHost:"127.0.0.1"
+    key: "local",
+    wsHost:"127.0.0.1",
     wsPort: 6001,
     cluster: "mt1",
     forceTLS: false,
@@ -157,14 +157,18 @@ window.Echo = new Echo({
 });
 ````
 
-3. Usage in Vue Component 
-    Listen for the 'Notif' event on the 'public' channel.
+3. Usage in Vue Component:
+
+    Listen for the 'NotifEvent' event on the 'public' channel.
+
     ```javascript
-      window.Echo.channel('public').listen('Notif', (e) => {
-          // Your code logic here
-         // Here, you can handle the received notification to get new notifications in real-time.
-     })
-    ````
+    import NotifEvent from '../../events/NotifEvent'; // Update the path accordingly
+
+    window.Echo.channel('public').listen(NotifEvent.event, (e) => {
+        // Your code logic here
+        // Handle the received notification to get new notifications in real-time.
+    });
+    ```
 
 
 Feel free to customize and expand on each step based on your project's specific requirements.
