@@ -170,4 +170,12 @@ window.Echo = new Echo({
 ## Contributing
 If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request. Your contributions are welcome!
 
+...
+
 Feel free to customize and expand on each step based on your project's specific requirements.
+
+---
+
+**Guide by: Talel Mejri**
+
+*Dedicated to Youssef Chlendi for continuous support.*
