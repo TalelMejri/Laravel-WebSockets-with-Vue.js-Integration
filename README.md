@@ -174,5 +174,6 @@ This guide provides step-by-step instructions on how to integrate Laravel WebSoc
         // Handle the received notification to get new notifications in real-time.
     });
     ```
+    
 
 Feel free to customize and expand on each step based on your project's specific requirements.
