@@ -10,3 +10,10 @@ Follow these steps to set up the environment and start using WebSockets in your 
     ```bash
     composer require beyondcode/laravel-websockets
     ```
+    
+2. Publish migrations and run them:
+
+    ```bash
+    php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
+    php artisan migrate
+    ```
