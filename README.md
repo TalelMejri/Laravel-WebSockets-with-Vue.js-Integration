@@ -114,7 +114,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
   ```bash
    http://localhost:8000/laravel-websockets 
   ```
-  style="display: flex; justify-content: space-between;"
+ <div style="display: flex; justify-content: space-between;">
          ![Profile](after_connect.png)    ![Profile](before_connect.png)
    </div>
  
