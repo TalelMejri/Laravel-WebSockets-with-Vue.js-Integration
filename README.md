@@ -158,12 +158,10 @@ window.Echo = new Echo({
 ````
  3. Usage in Vue Component:
 
-    Listen for the 'NotifEvent' event on the 'public' channel.
+    Listen for the 'Notif' event on the 'public' channel.
 
     ```javascript
-    import NotifEvent from '../../events/NotifEvent'; // Update the path accordingly
-
-    window.Echo.channel('public').listen(NotifEvent.event, (e) => {
+    window.Echo.channel('public').listen(Notif, (e) => {
         // Your code logic here
         // Handle the received notification to get new notifications in real-time.
     });
