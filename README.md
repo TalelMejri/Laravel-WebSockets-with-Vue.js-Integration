@@ -17,3 +17,8 @@ Follow these steps to set up the environment and start using WebSockets in your 
     php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
     php artisan migrate
     ```
+3. Publish the WebSocket configuration file:
+
+    ```bash
+    php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
+    ```
