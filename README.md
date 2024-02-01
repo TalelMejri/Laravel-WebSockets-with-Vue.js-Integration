@@ -174,4 +174,4 @@ If you encounter any issues or have suggestions for improvements, please feel fr
 
 **Guide by: Talel Mejri**
 
-*Dedicated to Youssef Chlendi for continuous support.*
+*Dedicated to [Mohamed Youssef CHLENDI](https://github.com/youssefchlendi) for continuous support.*
