@@ -104,12 +104,12 @@ Follow these steps to set up the environment and start using WebSockets in your 
     broadcast(new Notif("test"));
     ```
 
-11.Run the WebSockets server:
+10. Run the WebSockets server:
   ```bash
     php artisan websockets:serve
   ```
 
-12.Open the Laravel WebSockets dashboard in your browser. You can access it at to confirm that a new connection has been established.
+11. Open the Laravel WebSockets dashboard in your browser. You can access it at to confirm that a new connection has been established.
 
   ```bash
    http://localhost:8000/laravel-websockets 
@@ -119,7 +119,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
   <img src="before_connect.png" alt="Before Connect" style="border: 1px solid red;" width="500px" >
 </div>
  
-13.To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
+12. To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
 
  Create a test route in your routes/web.php file
 
@@ -135,12 +135,12 @@ Follow these steps to set up the environment and start using WebSockets in your 
 
 ## Vue.js Integration
 
- 1.Install required packages:
+ 1. Install required packages:
  
   ```bash
     npm install  laravel-echo pusher-js
   ```
- 2.Update your 'main.js' file:
+ 2. Update your 'main.js' file:
  
  ```javascript
  import Echo from "laravel-echo"
@@ -156,8 +156,7 @@ window.Echo = new Echo({
     disableStats: true,
 });
 ````
-
-3. Usage in Vue Component:
+ 3. Usage in Vue Component:
 
     Listen for the 'NotifEvent' event on the 'public' channel.
 
@@ -170,5 +169,7 @@ window.Echo = new Echo({
     });
     ```
 
+#### Contributing
+If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request. Your contributions are welcome!
 
 Feel free to customize and expand on each step based on your project's specific requirements.
