@@ -22,3 +22,5 @@ Follow these steps to set up the environment and start using WebSockets in your 
     ```bash
     php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
     ```
+    
+4. Uncomment `App\Providers\BroadcastServiceProvider::class` in `config/app.php`.
