@@ -57,8 +57,37 @@ Follow these steps to set up the environment and start using WebSockets in your 
         ],
     ],
     ```
-8. Create a new event
+8. Create a new event:
 
-```bash
-php artisan make:event NameEvent
-  ```
+    ```bash
+    php artisan make:event NotifEvent
+    ```
+
+    Update `NotifEvent.php` to implement `ShouldBroadcastNow`:
+
+    ```php
+    use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
+    use Illuminate\Queue\SerializesModels;
+
+    class NotifEvent implements ShouldBroadcastNow
+    {
+        use SerializesModels;
+
+        private $notif;
+
+        public function __construct($notif)
+        {
+            $this->notif = $notif;
+        }
+
+        public function broadcastWith()
+        {
+            return ['message' => $this->notif];
+        }
+
+        public function broadcastOn()
+        {
+            return new Channel('public');
+        }
+    }
+    ```
