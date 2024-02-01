@@ -3,7 +3,7 @@
 This guide provides step-by-step instructions on how to integrate Laravel WebSockets with Vue.js for real-time communication.
 Follow these steps to set up the environment and start using WebSockets in your Laravel application.
 
-## Laravel WebSockets Installation
+## Laravel WebSockets Installation And Test
 
 1. Install the Laravel WebSockets package:
 
@@ -133,7 +133,30 @@ Follow these steps to set up the environment and start using WebSockets in your 
   ```
  <img src="CheckEvent Work.png" alt=" CheckEvent Work">
 
+## Vue.js Integration
 
+ 1.Install required packages:
+ 
+  ```bash
+    npm install  laravel-echo pusher-js
+  ```
+ 2.Update your 'main.js' file:
+ 
+ ```javascript
+ import Echo from "laravel-echo"
+ window.Pusher = require('pusher-js');
+
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: "local"
+    wsHost:"127.0.0.1"
+    wsPort: 6001,
+    cluster: "mt1",
+    forceTLS: false,
+    disableStats: true,
+});
+
+```
 
 
 Feel free to customize and expand on each step based on your project's specific requirements.
