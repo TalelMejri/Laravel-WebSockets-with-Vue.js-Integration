@@ -131,8 +131,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
         return "Event has been sent!";
     });
   ```
-
-
+ <img src="CheckEvent Work.png" alt=" CheckEvent Work">
 
 
 
