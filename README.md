@@ -28,5 +28,5 @@ Follow these steps to set up the environment and start using WebSockets in your 
 5. Install Pusher PHP server:
 
     ```bash
-    composer require pusher/pusher-php-server ^VERSION --ignore-platform-reqs
+    composer require pusher/pusher-php-server 
     ```
