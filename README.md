@@ -158,12 +158,13 @@ window.Echo = new Echo({
 ````
 
 3. Usage in Vue Component 
-Listen for the 'Notif' event on the 'public' channel.
-window.Echo.channel('public').listen('Notif', (e) => {
-    // Your code logic here
-    // Here, you can handle the received notification to get new notifications in real-time.
-})
-
+    Listen for the 'Notif' event on the 'public' channel.
+    ```javascript
+      window.Echo.channel('public').listen('Notif', (e) => {
+          // Your code logic here
+         // Here, you can handle the received notification to get new notifications in real-time.
+     })
+    ````
 
 
 Feel free to customize and expand on each step based on your project's specific requirements.
