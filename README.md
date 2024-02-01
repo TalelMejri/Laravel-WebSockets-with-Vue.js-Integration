@@ -92,7 +92,7 @@ Follow these steps to set up the environment and start using WebSockets in your 
     }
     ```
 
- 9. Broadcast the event in your controller:
+9. Broadcast the event in your controller:
 
     In your controller where you want to broadcast the event:
 
@@ -104,7 +104,18 @@ Follow these steps to set up the environment and start using WebSockets in your 
     broadcast(new Notif("test"));
     ```
 
-10.To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
+11.Run the WebSockets server:
+  ```bash
+    php artisan websockets:serve
+  ```
+
+12.Open the Laravel WebSockets dashboard in your browser. You can access it at to confirm that a new connection has been established.
+
+  ```bash
+   http://localhost:8000/laravel-websockets 
+  ```
+      
+13.To verify that WebSocket communication is working, you can perform a simple test by broadcasting an event in your Laravel application.
 
  Create a test route in your routes/web.php file
 
@@ -115,7 +126,9 @@ Follow these steps to set up the environment and start using WebSockets in your 
         broadcast(new Notif());
         return "Event has been sent!";
     });
-    ```
+  ```
+
+
 
 
 
