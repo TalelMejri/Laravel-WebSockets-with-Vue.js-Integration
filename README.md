@@ -30,3 +30,13 @@ Follow these steps to set up the environment and start using WebSockets in your 
     ```bash
     composer require pusher/pusher-php-server 
     ```
+ 6. Update your `.env` file:
+
+    ```env
+    BROADCAST_DRIVER=pusher
+
+    PUSHER_APP_ID=local
+    PUSHER_APP_KEY=local
+    PUSHER_APP_SECRET=local
+    PUSHER_APP_CLUSTER=mt1
+    ```
