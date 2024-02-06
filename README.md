@@ -161,7 +161,7 @@ window.Echo = new Echo({
     Listen for the 'Notif' event on the 'public' channel.
 
     ```javascript
-    window.Echo.channel('public').listen(Notif, (e) => {
+    window.Echo.channel('public').listen('Notif', (e) => {
         // Your code logic here
         // Handle the received notification to get new notifications in real-time.
     });
